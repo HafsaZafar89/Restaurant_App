@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_card_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/profile_bg_color"
+        app:cardCornerRadius="30dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_lines"
+                android:layout_width="@dimen/lines_width"
+                android:layout_height="@dimen/lines_height"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/lines"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_shopping_icon"
+                android:layout_width="@dimen/shopping_icon_width"
+                android:layout_height="@dimen/shopping_icon_height"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/outline_add_shopping_cart_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/RestaurantLogo"
+                android:layout_width="@dimen/restaurant_logo_width"
+                android:layout_height="@dimen/restaurant_logo_height"
+                android:layout_marginStart="100dp"
+                android:src="@drawable/restaurant_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_lines" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- search bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCard"
+        android:layout_width="0dp"
+        android:layout_marginTop="-24dp"
+        android:layout_height="@dimen/search_height"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toBottomOf="@id/cv_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="@dimen/search_icon_width"
+            android:layout_height="@dimen/search_icon_height"
+            android:background="@drawable/search"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="What do you want to eat"
+            android:layout_marginStart="60dp"
+            android:padding="10dp"
+            android:textColorHint="@color/profile_bg_color"
+            android:textSize="20sp"
+            android:textStyle="italic"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- display dishes -->
+    <!-- Noodles -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNoodlesBox"
+        android:layout_width="@dimen/category_box_width"
+        android:layout_height="@dimen/category_box_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchCard"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/NoodlesIcon"
+            android:layout_width="@dimen/category_icon_width"
+            android:layout_height="@dimen/category_icon_height"
+            android:background="@drawable/noodles"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noodles"
+        android:textColor="@color/profile_bg_color"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/cvNoodlesBox"
+        app:layout_constraintStart_toStartOf="@id/cvNoodlesBox"
+        app:layout_constraintTop_toBottomOf="@id/cvNoodlesBox" />
+
+
+    <!-- Burger -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/BurgerBox"
+        android:layout_width="@dimen/category_box_width"
+        android:layout_height="@dimen/category_box_height"
+        app:cardBackgroundColor="@color/profile_bg_color"
+        app:layout_constraintTop_toTopOf="@id/cvNoodlesBox"
+        app:layout_constraintStart_toEndOf="@id/cvNoodlesBox"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/BurgerIcon"
+            android:layout_width="@dimen/category_icon_width"
+            android:layout_height="@dimen/category_icon_height"
+            android:background="@drawable/burger"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:text="@string/burger"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/profile_bg_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/BurgerBox"
+        app:layout_constraintStart_toStartOf="@id/BurgerBox"
+        app:layout_constraintEnd_toEndOf="@id/BurgerBox"/>
+
+
+    <!-- Salad -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSaladBox"
+        android:layout_width="@dimen/category_box_width"
+        android:layout_height="@dimen/category_box_height"
+        app:layout_constraintStart_toEndOf="@id/BurgerBox"
+        app:layout_constraintTop_toBottomOf="@id/searchCard"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/SaladIcon"
+            android:layout_width="@dimen/category_icon_width"
+            android:layout_height="@dimen/category_icon_height"
+            android:background="@drawable/salad"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salad"
+        android:textColor="@color/profile_bg_color"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/cvSaladBox"
+        app:layout_constraintStart_toStartOf="@id/cvSaladBox"
+        app:layout_constraintTop_toBottomOf="@id/cvSaladBox" />
+
+
+    <!-- Drink -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDrinkBox"
+        android:layout_width="@dimen/category_box_width"
+        android:layout_height="@dimen/category_box_height"
+        app:layout_constraintStart_toEndOf="@id/cvSaladBox"
+        app:layout_constraintTop_toBottomOf="@id/searchCard"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/DrinkIcon"
+            android:layout_width="@dimen/category_icon_width"
+            android:layout_height="@dimen/category_icon_height"
+            android:background="@drawable/drink"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:text="@string/drink"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/profile_bg_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cvDrinkBox"
+        app:layout_constraintStart_toStartOf="@id/cvDrinkBox"
+        app:layout_constraintEnd_toEndOf="@id/cvDrinkBox"/>
+
+
+    <!-- chips -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvChipsBox"
+        android:layout_width="@dimen/category_box_width"
+        android:layout_height="@dimen/category_box_height"
+        app:layout_constraintStart_toEndOf="@id/cvDrinkBox"
+        app:layout_constraintTop_toBottomOf="@id/searchCard"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/cvChipsIcon"
+            android:layout_width="@dimen/category_icon_width"
+            android:layout_height="@dimen/category_icon_height"
+            android:background="@drawable/potato_chips"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:text="@string/chips"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/profile_bg_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cvChipsBox"
+        app:layout_constraintStart_toStartOf="@id/cvChipsBox"
+        app:layout_constraintEnd_toEndOf="@id/cvChipsBox"/>
+
+
+    <!-- Double Cheese burger -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ivBurgerBox"
+        android:layout_width="@dimen/burger_box_width"
+        android:layout_height="@dimen/burger_box_height"
+        android:layout_marginStart="20dp"
+        app:cardBackgroundColor="@color/profile_bg_color"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@id/cvDrinkBox"
+        app:layout_constraintTop_toTopOf="@id/cvNoodlesBox"
+        app:layout_constraintVertical_bias="0.467">
+
+        <TextView
+            android:id="@+id/tvDoubleCheeseBurger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="14dp"
+            android:text="@string/double_burger"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/price_rs_width"
+            android:layout_height="@dimen/price_rs_height"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="200dp"
+            android:text="@string/rs"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tvBurgerPrice"
+            android:layout_width="@dimen/burger_price_width"
+            android:layout_height="@dimen/burger_price_height"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="220dp"
+            android:text="@string/burger_price"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/plus_card_width"
+            android:layout_height="@dimen/plus_card_height"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="210dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/profile_bg_color"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivDoubleCheeseBurger"
+        android:layout_width="@dimen/double_cheese_burger_width"
+        android:layout_height="@dimen/double_cheese_burger_height"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/double_cheese_burger"
+        android:translationZ="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivBurgerBox"/>
+
+
+    <!-- Salad -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ivSaladBox"
+        android:layout_width="@dimen/salad_box_width"
+        android:layout_height="@dimen/salad_box_height"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/profile_bg_color"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@id/cvDrinkBox"
+        app:layout_constraintTop_toTopOf="@id/cvNoodlesBox"
+        app:layout_constraintVertical_bias="0.462">
+
+        <TextView
+            android:id="@+id/tvSalad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="14dp"
+            android:text="@string/salad_image_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivSalad"
+            android:layout_width="@dimen/salad_image_width"
+            android:layout_height="@dimen/salad_image_height"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/salad1" />
+
+        <TextView
+            android:layout_width="@dimen/price_rs_width"
+            android:layout_height="@dimen/price_rs_height"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="200dp"
+            android:text="@string/rs"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="@dimen/salad_price_width"
+            android:layout_height="@dimen/salad_price_height"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="220dp"
+            android:text="@string/salad_price"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/BottomCard"
+        android:layout_width="@dimen/bottom_card_width"
+        android:layout_height="@dimen/bottom_card_height"
+        android:layout_marginTop="510dp"
+        app:cardBackgroundColor="@color/profile_bg_color"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_card">
+
+        <ImageView
+            android:id="@+id/BookMarkIcon"
+            android:layout_width="@dimen/bottom_icon_width"
+            android:layout_height="@dimen/bottom_icon_height"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/book_mark" />
+
+        <ImageView
+            android:id="@+id/ComposeIcon"
+            android:layout_width="@dimen/bottom_icon_width"
+            android:layout_height="@dimen/bottom_icon_height"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/compose"/>
+
+        <ImageView
+            android:id="@+id/BellIcon"
+            android:layout_width="@dimen/bottom_icon_width"
+            android:layout_height="@dimen/bottom_icon_height"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/bell"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSelectHome"
+            android:layout_width="@dimen/select_home_width"
+            android:layout_height="@dimen/select_home_height"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/HomeIcon"
+                android:layout_width="@dimen/home_icon_width"
+                android:layout_height="@dimen/home_icon_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/home" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">restaurant</string>
+    <string name="noodles">Noodles</string>
+    <string name="burger">Burger</string>
+    <string name="salad">Salad</string>
+    <string name="drink">Drink</string>
+    <string name="chips">Chips</string>
+    <string name="double_burger">Double Cheese \nBurger</string>
+    <string name="rs">Rs.</string>
+    <string name="burger_price">500</string>
+    <string name="salad_image_name">Salad</string>
+    <string name="salad_price">300</string>
+</resources>

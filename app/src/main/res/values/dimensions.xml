@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="top_card_height">200dp</dimen>
+
+    <dimen name="lines_width">40dp</dimen>
+    <dimen name="lines_height">60dp</dimen>
+
+    <dimen name="shopping_icon_width">45dp</dimen>
+    <dimen name="shopping_icon_height">45dp</dimen>
+
+    <dimen name="restaurant_logo_width">180dp</dimen>
+    <dimen name="restaurant_logo_height">200dp</dimen>
+
+    <dimen name="search_height">50dp</dimen>
+
+    <dimen name="search_icon_width">35dp</dimen>
+    <dimen name="search_icon_height">35dp</dimen>
+
+    <dimen name="category_box_width">60dp</dimen>
+    <dimen name="category_box_height">60dp</dimen>
+
+    <dimen name="category_icon_width">50dp</dimen>
+    <dimen name="category_icon_height">50dp</dimen>
+
+    <dimen name="burger_box_width">190dp</dimen>
+    <dimen name="burger_box_height">290dp</dimen>
+
+    <dimen name="price_rs_width">30dp</dimen>
+    <dimen name="price_rs_height">30dp</dimen>
+
+    <dimen name="burger_price_width">50dp</dimen>
+    <dimen name="burger_price_height">50dp</dimen>
+
+    <dimen name="plus_card_width">40dp</dimen>
+    <dimen name="plus_card_height">40dp</dimen>
+
+    <dimen name="double_cheese_burger_width">157dp</dimen>
+    <dimen name="double_cheese_burger_height">140dp</dimen>
+
+    <dimen name="salad_box_width">200dp</dimen>
+    <dimen name="salad_box_height">290dp</dimen>
+
+    <dimen name="salad_image_width">130dp</dimen>
+    <dimen name="salad_image_height">130dp</dimen>
+
+    <dimen name="salad_price_width">50dp</dimen>
+    <dimen name="salad_price_height">50dp</dimen>
+
+    <dimen name="bottom_card_width">390dp</dimen>
+    <dimen name="bottom_card_height">70dp</dimen>
+
+    <dimen name="bottom_icon_width">40dp</dimen>
+    <dimen name="bottom_icon_height">40dp</dimen>
+
+    <dimen name="select_home_width">60dp</dimen>
+    <dimen name="select_home_height">60dp</dimen>
+
+    <dimen name="home_icon_width">48dp</dimen>
+    <dimen name="home_icon_height">48dp</dimen>
+
+</resources>
